@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+   "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default" extends="json-default">
+	
+	
+		<action name="Fetch" class="com.highradius.Action.JsonAction" method="fetch">
+			<result type="json"></result>
+		</action>
+		
+		
+		<action name="Add" class="com.highradius.Action.MovieAction" method="add">
+			<result name="registered"></result>
+		</action>
+		
+		<action name="Edit" class="com.highradius.Action.MovieAction" method="edit">	
+			<result name="updated"></result>
+		</action>
+		
+		<action name="Delete" class="com.highradius.Action.MovieAction" method="delete">		
+			<result name="deleted"></result>
+		</action>
+		
+		
+		<action name="Search" class="com.highradius.Action.SearchAction" method="search">
+			<result type="json"></result>
+		</action>
+		
+		
+	 </package>
+	
+	
+</struts>
